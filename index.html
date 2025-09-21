@@ -103,6 +103,13 @@
     .brand{color:var(--ink)}
     .init{font-variant-caps:normal;font-size:1.05em;letter-spacing:.02em}
 
+    /* Desktop only - fix spacing between line-groups */
+    @media (min-width: 981px) {
+      .wordmark .line-group:first-child {
+        margin-right: 0.4em; /* Match the spacing between words */
+      }
+    }
+
     /* Tablet */
     @media (max-width: 980px) and (min-width: 641px) {
       .hero { 
@@ -202,8 +209,10 @@
         bottom: auto; /* Override the default bottom positioning */
         width: 90%; /* Simplified from calc */
         max-width: 600px; /* Limit width on larger mobile devices */
-        margin: 0 auto;
-        padding-bottom: 2rem; /* Add some padding at the bottom */
+        margin: 0;
+        padding: 0 0 2rem 0; /* Bottom padding only, no side padding */
+        -webkit-box-sizing: border-box;
+        box-sizing: border-box;
       }
       .cols{grid-template-columns:1fr;grid-row-gap:1rem} /* Reduced from 1.5rem */
       .col { 
