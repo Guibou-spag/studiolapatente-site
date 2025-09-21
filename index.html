@@ -210,17 +210,11 @@
         width: 90%; /* Simplified from calc */
         max-width: 600px; /* Limit width on larger mobile devices */
         margin: 0;
-        padding: 0 20px 2rem 20px; /* 20px horizontal padding for equal spacing */
+        padding: 0 0 2rem 0; /* Bottom padding only, no side padding */
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
       }
-      .cols{
-        grid-template-columns:1fr;
-        grid-row-gap:1rem; /* Reduced from 1.5rem */
-        width:100%;
-        -webkit-box-sizing:border-box;
-        box-sizing:border-box; /* Ensure grid stays within container */
-      }
+      .cols{grid-template-columns:1fr;grid-row-gap:1rem} /* Reduced from 1.5rem */
       .col { 
         font-size: 19px; /* Slightly smaller to emphasize hero */
       }
