@@ -1,6 +1,6 @@
 <!DOCTYPE html>
-<html lang="fr"><head>
-<meta http-equiv="content-type" content="text/html; charset=UTF-8">
+<html lang="en">
+<head>
   <!-- 
     IMPORTANT: Place these font files in the same directory as this HTML:
     - Doorkick-Italic.woff2
@@ -99,7 +99,7 @@
     .col p{margin:0 0 .9rem 0}
 
     .email a{color:var(--body);text-decoration:none;border-bottom:1px dotted rgba(255,255,255,.55)}
-    .email a .at{color:var(--body);font-weight:800}
+    .email a .at{color:var(--body);font-weight:400}
     .brand{color:var(--ink)}
     .init{font-variant-caps:normal;font-size:1.05em;letter-spacing:.02em}
 
@@ -210,11 +210,17 @@
         width: 90%; /* Simplified from calc */
         max-width: 600px; /* Limit width on larger mobile devices */
         margin: 0;
-        padding: 0 0 2rem 0; /* Bottom padding only, no side padding */
+        padding: 0 20px 2rem 20px; /* 20px horizontal padding for equal spacing */
         -webkit-box-sizing: border-box;
         box-sizing: border-box;
       }
-      .cols{grid-template-columns:1fr;grid-row-gap:1rem} /* Reduced from 1.5rem */
+      .cols{
+        grid-template-columns:1fr;
+        grid-row-gap:1rem; /* Reduced from 1.5rem */
+        width:100%;
+        -webkit-box-sizing:border-box;
+        box-sizing:border-box; /* Ensure grid stays within container */
+      }
       .col { 
         font-size: 19px; /* Slightly smaller to emphasize hero */
       }
@@ -531,15 +537,11 @@
     <div class="bottom" id="about">
       <div class="cols">
         <section class="col" lang="fr" aria-label="À propos">
-          <p data-init-applied="1"><span class="brand" data-brand-init="1"><span class="init">L</span>a Patente à Gosse</span> est un micro-studio de création de jeux indépendant. <span class="init">N</span>ous
- façonnons des expériences interactives singulières et mettons nos 
-compétences d'art au service d'autres équipes, partout dans le monde. <span class="init">N</span>otre premier titre original est actuellement en production.</p>
+          <p data-init-applied="1"><span class="brand" data-brand-init="1"><span class="init">L</span>a Patente à Gosse</span> est un micro-studio de création de jeux indépendant. <span class="init">N</span>ous façonnons des expériences interactives singulières et mettons nos compétences d'art au service d'autres équipes, partout dans le monde. <span class="init">N</span>otre premier titre original est actuellement en production.</p>
           <p class="email">Écrivez-nous : <a href="mailto:info@studiolapatente.com">info<span class="at">@</span>studiolapatente.com</a></p>
         </section>
         <section class="col" lang="en" aria-label="About">
-          <p data-init-applied="1"><span class="brand" data-brand-init="1"><span class="init">L</span>a Patente à Gosse</span>
- is a small independent game studio crafting whimsical interactive 
-experiences and providing art support for fellow teams worldwide. <span class="init">O</span>ur first original title is currently in development.</p>
+          <p data-init-applied="1"><span class="brand" data-brand-init="1"><span class="init">L</span>a Patente à Gosse</span> is a small independent game studio crafting whimsical interactive experiences and providing art support for fellow teams worldwide. <span class="init">O</span>ur first original title is currently in development.</p>
           <p class="email">Reach us at <a href="mailto:info@studiolapatente.com">info<span class="at">@</span>studiolapatente.com</a>.</p>
         </section>
       </div>
@@ -571,5 +573,5 @@ experiences and providing art support for fellow teams worldwide. <span class="i
     });
   })();</script>
 
-
-</body></html>
+</body>
+</html>
